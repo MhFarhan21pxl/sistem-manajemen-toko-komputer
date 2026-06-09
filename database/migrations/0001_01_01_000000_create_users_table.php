@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password'); // Pastikan baris ini hanya ada satu
+            $table->enum('role', ['admin', 'kasir'])->default('kasir'); // Baris role yang kita tambah
             $table->rememberToken();
             $table->timestamps();
         });
