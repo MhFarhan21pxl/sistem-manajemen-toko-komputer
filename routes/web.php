@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\DashboardController;
 
 // Rute Publik (Etalase Toko)
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -15,6 +16,7 @@ Route::post('/products', [ProductController::class, 'store'])->name('products.st
 Route::get('/pos', [TransactionController::class, 'create'])->name('pos.index');
 Route::post('/pos/checkout', [TransactionController::class, 'store'])->name('pos.checkout');
 Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
 Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');

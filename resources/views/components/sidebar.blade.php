@@ -1,11 +1,16 @@
 <aside class="sidebar">
-  <div class="sidebar-section-title">Master Data</div>
+  <div class="sidebar-section-title">Menu Utama</div>
   
+  <a href="{{ route('dashboard.index') }}" class="sidebar-item {{ Route::is('dashboard.*') ? 'active' : '' }}">
+    <i class="fas fa-tachometer-alt"></i> Dashboard
+  </a>
+
+  <div class="sidebar-section-title">Master Data</div>
   <a href="{{ route('products.index') }}" class="sidebar-item {{ Route::is('products.*') ? 'active' : '' }}">
     <i class="fas fa-box-open"></i> Data Produk
   </a>
   <a href="#" class="sidebar-item">
-    <i class="fas fa-tags"></i> Kategori
+    <i class="fas fa-tags"></i> Kategori Produk
   </a>
 
   <div class="sidebar-section-title">Transaksi</div>
