@@ -9,7 +9,7 @@
   </a>
 
   <div class="sidebar-section-title">Transaksi</div>
-  <a href="#" class="sidebar-item">
+  <a href="{{ route('pos.index') }}" class="sidebar-item">
     <i class="fas fa-desktop"></i> Kasir POS
   </a>
   <a href="#" class="sidebar-item">
